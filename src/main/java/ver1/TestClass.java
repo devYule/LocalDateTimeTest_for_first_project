@@ -46,5 +46,35 @@ public class TestClass {
         System.out.println("before = " + before);
         System.out.println("after = " + now.isAfter(secondTarget.atStartOfDay()));
 
+        DayOfWeek dayOfWeek1 = now.getDayOfWeek();
+        System.out.println("dayOfWeek1 = " + dayOfWeek1);
+        int dayOfMonth = now.getDayOfMonth();
+        System.out.println("dayOfMonth = " + dayOfMonth);
+
+
+        // 해당 월의 마지막날, 첫번째 날 (일수) 구하기
+        LocalDate now1 = LocalDate.now();
+        // 해당 년의 마지막 일
+        int i = now1.lengthOfYear();
+        System.out.println("last date current year = " + i);
+        // 해당 월의 마지막 일
+        int i1 = now1.lengthOfMonth();
+        System.out.println("last date current month = " + i1);
+        // 해당 월의 1번째 날
+        System.out.println("해당 월의 1번째 날");
+        LocalDate localDate = now1.withDayOfMonth(1);
+        System.out.println("localDate = " + localDate);
+        // 해당 월의 첫번째 날의 요일 숫자로 가져오기
+        System.out.println("해당 월의 첫번째 날짜 요일 숫자로 가져오기");
+        int value1 = localDate.getDayOfWeek().getValue();
+        System.out.println("localDate.getDayOfWeek().getValue() = " + value1);
+
+        // 해당 월의 1번째 날의 마지막 날짜 (무의미하긴 함)
+        System.out.println("해당 월의 1번째 날의 마지막 날짜 (무의미하긴 함)");
+        LocalDate localDate1 = now1.withDayOfMonth(1);
+        int i2 = localDate1.lengthOfMonth();
+        System.out.println("lastDate current Month = " + i2);
+
+
     }
 }
