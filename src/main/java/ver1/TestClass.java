@@ -52,7 +52,8 @@ public class TestClass {
         System.out.println("dayOfMonth = " + dayOfMonth);
 
 
-        // 해당 월의 마지막날, 첫번째 날 (일수) 구하기
+        // 해당 월의 마지막날, 첫번째 날 (일수) 구하기 - 시작
+
         LocalDate now1 = LocalDate.now();
         // 해당 년의 마지막 일
         int i = now1.lengthOfYear();
@@ -62,7 +63,7 @@ public class TestClass {
         System.out.println("last date current month = " + i1);
         // 해당 월의 1번째 날
         System.out.println("해당 월의 1번째 날");
-        LocalDate localDate = now1.withDayOfMonth(1);
+        LocalDateTime localDate = now1.atStartOfDay().withDayOfMonth(1);
         System.out.println("localDate = " + localDate);
         // 해당 월의 첫번째 날의 요일 숫자로 가져오기
         System.out.println("해당 월의 첫번째 날짜 요일 숫자로 가져오기");
