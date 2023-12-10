@@ -66,7 +66,7 @@ public class TestClass {
         LocalDateTime localDate = now1.atStartOfDay().withDayOfMonth(1);
         System.out.println("localDate = " + localDate);
         // 해당 월의 첫번째 날의 요일 숫자로 가져오기
-        System.out.println("해당 월의 첫번째 날짜 요일 숫자로 가져오기");
+        System.out.println("해당 일의 요일 숫자로 가져오기");
         int value1 = localDate.getDayOfWeek().getValue();
         System.out.println("localDate.getDayOfWeek().getValue() = " + value1);
 
